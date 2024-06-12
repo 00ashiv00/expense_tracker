@@ -1,7 +1,5 @@
 package com.ash.projects.expense_tracker.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,15 +19,15 @@ public class Expenses {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int id;
 	
+	String name;
 	double amount;
 	String date;
+	String time;
 	
 	@ManyToOne
 	Categories category;
 	
-	@JsonIgnore
-	@ManyToOne
-	Users users;
+
 	
 	
 	

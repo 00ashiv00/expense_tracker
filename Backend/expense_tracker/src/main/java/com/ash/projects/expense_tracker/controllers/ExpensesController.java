@@ -24,17 +24,19 @@ public class ExpensesController {
 	@Autowired
 	private ExpensesService expensesService;
 	
-	@GetMapping("/getExpense/{userId}")
-	public List<Expenses> getExpenseByUser(@PathVariable int userId) {
-		return expensesService.expenseByUser(userId);
+	
+	
+	@GetMapping("/all")
+	public List<Expenses> getAllExpense() {
+		return expensesService.allExpenses();
 		
 	}
 	
-	@PostMapping("/addExpense/{userId}/{categoryId}")
-	public ResponseEntity<Expenses> addExpenseByUser(@PathVariable int userId,@PathVariable int categoryId,@RequestBody double amount){
-		Expenses expense=expensesService.addExpense(userId,categoryId,amount);
+	
+	@PostMapping("/addExpense/{categoryId}/{name}")
+	public ResponseEntity<Expenses> addExpenseByUser(@PathVariable int categoryId,@RequestBody double amount,@PathVariable String name){
+		Expenses expense=expensesService.addExpense(name,categoryId,amount);
 		return new ResponseEntity<Expenses>(expense, HttpStatus.OK);
-		
 	}
 	
 

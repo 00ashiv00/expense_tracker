@@ -1,0 +1,176 @@
+/* .container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+} 
+  
+h1 { 
+    text-align: center; 
+    margin-bottom: 20px; 
+} 
+  
+form { 
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+} 
+  
+input[type="text"], 
+input[type="number"] { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    outline: none; 
+} 
+  
+input[type="text"]::placeholder, 
+input[type="number"]::placeholder { 
+    color: #999; 
+} 
+  
+button { 
+    padding: 10px 20px; 
+    background-color: #4caf50; 
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+} 
+  
+button:hover { 
+    background-color: #45a049; 
+} 
+  
+.expense-table { 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+} 
+  
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+} 
+  
+thead th { 
+    background-color: #f2f2f2; 
+    padding: 10px; 
+    text-align: left; 
+} 
+  
+tbody td { 
+    padding: 10px; 
+    border-top: 1px solid #ddd; 
+} 
+  
+.delete-btn { 
+    color: red; 
+    cursor: pointer; 
+} 
+  
+.total-amount { 
+    padding: 10px; 
+    text-align: right; 
+    background-color: #f2f2f2; 
+} */
+
+.wrapper {
+    background-color:white;
+}
+
+.new-expense {
+    font-size: 1.05rem;
+}
+
+.new-expense__controls {
+    background-color: #FAF9FB;
+    border-radius: 40px;
+}
+
+.expense-controls__btn {
+    background-color: #B6588B !important;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: white !important;
+    border-radius: 20px !important;
+    padding: 8px 30px !important;
+}
+
+.expenses .chart {
+    height: 320px;
+    padding: 55px 23px;
+    background-color: #42224A;
+    border-radius: 40px;
+    align-items: flex-end;   
+}
+
+.expenses .chart .bar:nth-child(odd) .fill {
+    background-color: #684E6E;
+}
+
+.expenses .chart .bar:nth-child(even) .fill {
+    background-color: #55385C;
+}
+
+.expenses .chart .bar, .expenses .chart .bar .fill {
+    border-radius: 25px;
+}
+
+.expenses .chart .bar {
+    height: 100%;
+    margin:0 5px;
+    padding: 0;
+    color:#A08FA4;
+    text-align: center;
+}
+
+.expense-item {
+    background-color: #FAF9FB;
+    border-radius: 20px;
+}
+
+.expense-title {
+    font-size: 1.4rem;
+}
+
+.expense-date {
+    font-size: .95rem;
+    color: #8B718A;
+}
+
+.expense-amount {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.expense-category {
+    background-color: #F7F4F7 !important;
+    
+}
+
+
+@media (max-width: 768px) {
+    .expenses .chart .bar .fill {
+        width: 25px;
+    }
+
+    .chart {
+        overflow-y: scroll;
+    }
+}
+
+@media (min-width: 768px) {
+    .expenses .chart .bar {
+        margin: 0 10px;
+    }
+}
+
+@media (min-width:992px) {
+    .expenses .chart .bar {
+        margin: 0 18px;
+    }
+}
